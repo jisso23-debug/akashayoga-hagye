@@ -2681,7 +2681,44 @@
     });
   })();
 
-  // 5. 푸터 링크 호버 효과
+  // 5. 히어로 켄번즈 + 빛 파티클 효과
+  (function() {
+    // 켄번즈: 배경 사진 천천히 줌인 + 살짝 이동
+    var kbStyle = document.createElement('style');
+    kbStyle.textContent = '@keyframes kenburns{0%{transform:scale(1) translate(0,0)}50%{transform:scale(1.08) translate(-1%,-0.5%)}100%{transform:scale(1) translate(0,0)}}';
+    document.head.appendChild(kbStyle);
+    document.querySelectorAll('.hero-bg-photo').forEach(function(bg) {
+      bg.style.animation = 'kenburns 25s ease-in-out infinite';
+    });
+
+    // 빛 파티클: 반짝이는 작은 빛 입자들
+    var hero = document.querySelector('.hero');
+    if (!hero) return;
+    var particleContainer = document.createElement('div');
+    particleContainer.style.cssText = 'position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;';
+    hero.appendChild(particleContainer);
+
+    var particleStyle = document.createElement('style');
+    particleStyle.textContent = '@keyframes floatUp{0%{transform:translateY(0) scale(0);opacity:0}15%{opacity:1;transform:translateY(-10vh) scale(1)}85%{opacity:0.6}100%{transform:translateY(-90vh) scale(0.3);opacity:0}}';
+    document.head.appendChild(particleStyle);
+
+    function createParticle() {
+      var p = document.createElement('div');
+      var size = 2 + Math.random() * 4;
+      var left = Math.random() * 100;
+      var duration = 8 + Math.random() * 12;
+      var delay = Math.random() * 5;
+      var brightness = 0.3 + Math.random() * 0.5;
+      p.style.cssText = 'position:absolute;bottom:-10px;left:' + left + '%;width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:rgba(255,255,255,' + brightness + ');box-shadow:0 0 ' + (size * 2) + 'px rgba(255,255,255,' + (brightness * 0.6) + ');animation:floatUp ' + duration + 's ease-in ' + delay + 's infinite;pointer-events:none;';
+      particleContainer.appendChild(p);
+    }
+
+    for (var i = 0; i < 20; i++) {
+      createParticle();
+    }
+  })();
+
+  // 6. 푸터 링크 호버 효과
   (function() {
     document.querySelectorAll('.footer-link, footer a').forEach(function(link) {
       link.style.transition = 'transform 0.2s ease, color 0.2s ease';
