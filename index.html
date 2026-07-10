@@ -2608,7 +2608,92 @@
       }
     });
   });
-</script>
 
+  // ========================================
+  // 인터랙티브 효과
+  // ========================================
+
+  // 1. 스크롤 프로그레스 바
+  (function() {
+    var bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#a85d72,#b96f81);z-index:9999;width:0;pointer-events:none;';
+    document.body.appendChild(bar);
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) bar.style.width = (window.scrollY / h * 100) + '%';
+    });
+  })();
+
+  // 2. 수업 카드 3D 틸트
+  (function() {
+    document.querySelectorAll('.class-card, .welcome-card').forEach(function(card) {
+      card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+      card.style.transformStyle = 'preserve-3d';
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var cx = rect.width / 2;
+        var cy = rect.height / 2;
+        var rotY = ((x - cx) / cx) * 8;
+        var rotX = ((cy - y) / cy) * 8;
+        card.style.transform = 'perspective(600px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(10px)';
+        card.style.boxShadow = '0 20px 40px rgba(107,58,71,0.2)';
+      });
+      card.addEventListener('mouseleave', function() {
+        card.style.transform = 'perspective(600px) rotateX(0) rotateY(0) translateZ(0)';
+        card.style.boxShadow = '';
+      });
+    });
+  })();
+
+  // 3. 버튼 리플 효과
+  (function() {
+    var rippleStyle = document.createElement('style');
+    rippleStyle.textContent = '@keyframes btnRipple{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:0}}';
+    document.head.appendChild(rippleStyle);
+    document.querySelectorAll('.btn-primary, .btn-ghost, .nav-cta, .btn-kakao-contact, .btn-naver-reserve').forEach(function(btn) {
+      btn.style.position = 'relative';
+      btn.style.overflow = 'hidden';
+      btn.addEventListener('click', function(e) {
+        var rect = btn.getBoundingClientRect();
+        var ripple = document.createElement('span');
+        var size = Math.max(rect.width, rect.height) * 2;
+        ripple.style.cssText = 'position:absolute;border-radius:50%;background:rgba(255,255,255,0.35);transform:scale(0);animation:btnRipple 0.6s ease-out forwards;pointer-events:none;width:' + size + 'px;height:' + size + 'px;left:' + (e.clientX - rect.left - size/2) + 'px;top:' + (e.clientY - rect.top - size/2) + 'px;';
+        btn.appendChild(ripple);
+        setTimeout(function() { ripple.remove(); }, 700);
+      });
+    });
+  })();
+
+  // 4. 가격표 행 호버 하이라이트
+  (function() {
+    document.querySelectorAll('.price-table tbody tr').forEach(function(row) {
+      row.style.transition = 'background 0.3s ease, transform 0.2s ease';
+      row.addEventListener('mouseenter', function() {
+        row.style.background = 'rgba(185,111,129,0.08)';
+        row.style.transform = 'scale(1.01)';
+      });
+      row.addEventListener('mouseleave', function() {
+        row.style.background = '';
+        row.style.transform = '';
+      });
+    });
+  })();
+
+  // 5. 푸터 링크 호버 효과
+  (function() {
+    document.querySelectorAll('.footer-link, footer a').forEach(function(link) {
+      link.style.transition = 'transform 0.2s ease, color 0.2s ease';
+      link.addEventListener('mouseenter', function() {
+        link.style.transform = 'translateY(-2px)';
+      });
+      link.addEventListener('mouseleave', function() {
+        link.style.transform = '';
+      });
+    });
+  })();
+
+</script>
 </body>
 </html>
