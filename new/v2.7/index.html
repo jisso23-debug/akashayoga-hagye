@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<!-- 메인(/) 공개본 · 원본: /new/v2.8/ -->
-<link rel="canonical" href="https://akashayoga-hagye.co.kr">
+<!-- 미리보기(/new/) 전용: 메인 교체 때 아래 robots 줄을 지우고 canonical 줄의 주석을 풉니다. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- <link rel="canonical" href="https://akashayoga-hagye.co.kr"> -->
 <meta name="theme-color" content="#0b0806">
 <title>아카샤요가 하계 | 노원 하계동 요가·명상 스튜디오</title>
 <meta name="description" content="노원 하계동 아카샤요가. 빈야사·하타·테라피·명상. 7호선 하계역 도보 가능. 운영 10:00-21:50(화요일 일부 수업 22:10 종료), 일요일 휴무.">
@@ -25,12 +26,12 @@
 <meta name="twitter:title" content="아카샤요가 하계 | 노원 하계동 요가·명상 스튜디오">
 <meta name="twitter:description" content="서울 노원구 하계동 프리미엄 요가·명상 스튜디오. 빈야사·하타·명상. 운영 10:00-21:50, 일요일 휴무">
 <meta name="twitter:image" content="https://akashayoga-hagye.co.kr/new/media/og-gold.jpg">
-<link rel="icon" type="image/png" href="new/media/icon.png">
+<link rel="icon" type="image/png" href="../media/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@200;300;400&family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500&display=swap">
-<link rel="preload" as="image" href="new/media/hero-gold-m.webp" media="(max-width: 899px)" type="image/webp">
-<link rel="preload" as="image" href="new/media/hero-gold.webp" media="(min-width: 900px)" type="image/webp">
+<link rel="preload" as="image" href="../media/hero-gold-m.webp" media="(max-width: 899px)" type="image/webp">
+<link rel="preload" as="image" href="../media/hero-gold.webp" media="(min-width: 900px)" type="image/webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -280,8 +281,6 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
 .tonight-card h2{font-family:var(--sub);font-weight:700;font-size:clamp(25px,2.3vw,33px);line-height:1.4;margin:0 0 10px}
 .tonight-card .when{font-family:var(--title);font-size:12px;letter-spacing:.2em;color:#7c6750}
 .tonight-card .note{font-size:13px;color:#5f5040;margin:16px 0 0}
-.tonight-card .note.live{margin-top:8px;padding-top:10px;border-top:1px solid var(--paper-hair)}
-.tonight-card .note.live a{color:#5f5040;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:10px 0;margin:-10px 0}
 .sess{list-style:none;margin:0;padding:0}
 .sess li{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:18px;align-items:center;padding:16px 0;border-top:1px solid var(--paper-hair)}
 .sess li:last-child{border-bottom:1px solid var(--paper-hair)}
@@ -605,12 +604,12 @@ dialog.album::backdrop{background:#000}
   <!-- 오프닝 · 황금빛 메인 수련실 (image3 원본의 조명만 편집한 사진 · PHOTO-01 / VIDEO-01 촬영 후 교체 가능) -->
   <section class="intro bars" id="sc1" aria-label="아카샤요가 하계">
     <picture>
-      <source type="image/webp" srcset="new/media/hero-gold-960.webp 960w, new/media/hero-gold.webp 1448w" sizes="100vw">
-      <img class="still pc" src="new/media/hero-gold.jpg" srcset="new/media/hero-gold-960.jpg 960w, new/media/hero-gold.jpg 1448w" sizes="100vw" alt="" width="1448" height="1086" fetchpriority="high" data-slot="PHOTO-01">
+      <source type="image/webp" srcset="../media/hero-gold-960.webp 960w, ../media/hero-gold.webp 1448w" sizes="100vw">
+      <img class="still pc" src="../media/hero-gold.jpg" srcset="../media/hero-gold-960.jpg 960w, ../media/hero-gold.jpg 1448w" sizes="100vw" alt="" width="1448" height="1086" fetchpriority="high" data-slot="PHOTO-01">
     </picture>
     <picture>
-      <source type="image/webp" srcset="new/media/hero-gold-m.webp">
-      <img class="still m" src="new/media/hero-gold-m.jpg" alt="" width="611" height="1086" data-slot="PHOTO-01-세로">
+      <source type="image/webp" srcset="../media/hero-gold-m.webp">
+      <img class="still m" src="../media/hero-gold-m.jpg" alt="" width="611" height="1086" data-slot="PHOTO-01-세로">
     </picture>
     <div class="shade" aria-hidden="true"></div>
     <p class="loc" aria-hidden="true">서울 노원구 하계동, 노원로 236<small>해 질 무렵, 3층 수련실</small></p>
@@ -631,12 +630,12 @@ dialog.album::backdrop{background:#000}
     <span id="about" class="sr"></span>
     <div class="slate rv"><b>SC.02</b><span class="tc" id="sc2t">SPACE / LIGHT — 공간과 빛</span></div>
     <figure class="scope2 rv" id="scope">
-      <picture><source type="image/webp" srcset="new/media/space-window-gold-800.webp 800w, new/media/space-window-gold.webp 1122w" sizes="(max-width: 899px) 100vw, 1270px"><img src="new/media/space-window-gold.jpg" srcset="new/media/space-window-gold-800.jpg 800w, new/media/space-window-gold.jpg 1122w" sizes="(max-width: 899px) 100vw, 1270px" alt="노을빛이 들어오는 아카샤요가 하계 수련실 창가" width="1122" height="1402" loading="lazy" decoding="async" data-slot="PHOTO-03"></picture>
+      <picture><source type="image/webp" srcset="../media/space-window-gold-800.webp 800w, ../media/space-window-gold.webp 1122w" sizes="(max-width: 899px) 100vw, 1270px"><img src="../media/space-window-gold.jpg" srcset="../media/space-window-gold-800.jpg 800w, ../media/space-window-gold.jpg 1122w" sizes="(max-width: 899px) 100vw, 1270px" alt="노을빛이 들어오는 아카샤요가 하계 수련실 창가" width="1122" height="1402" loading="lazy" decoding="async" data-slot="PHOTO-03"></picture>
     </figure>
     <div class="light-grid">
       <!-- 아래 두 장은 SOMA 샘플의 분위기 사진(AI 생성 예시)을 대표 결정으로 사용 · 실제 하계 소품 사진이 생기면 교체 -->
-      <figure class="still2 rv"><div class="im"><picture><source type="image/webp" srcset="new/media/mood-oil.webp"><img src="new/media/mood-oil.jpg" alt="라벤더와 오일 병이 놓인 분위기 사진" width="512" height="512" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></div><figcaption><span>수련 뒤의 향</span><span class="tc">FRAME 01</span></figcaption></figure>
-      <figure class="still2 rv"><div class="im"><picture><source type="image/webp" srcset="new/media/mood-bolster.webp"><img src="new/media/mood-bolster.jpg" alt="볼스터와 담요가 놓인 분위기 사진" width="512" height="512" loading="lazy" decoding="async" style="object-position:50% 45%"></picture></div><figcaption><span>몸을 맡기는 도구</span><span class="tc">FRAME 02</span></figcaption></figure>
+      <figure class="still2 rv"><div class="im"><picture><source type="image/webp" srcset="../media/mood-oil.webp"><img src="../media/mood-oil.jpg" alt="라벤더와 오일 병이 놓인 분위기 사진" width="512" height="512" loading="lazy" decoding="async" style="object-position:50% 60%"></picture></div><figcaption><span>수련 뒤의 향</span><span class="tc">FRAME 01</span></figcaption></figure>
+      <figure class="still2 rv"><div class="im"><picture><source type="image/webp" srcset="../media/mood-bolster.webp"><img src="../media/mood-bolster.jpg" alt="볼스터와 담요가 놓인 분위기 사진" width="512" height="512" loading="lazy" decoding="async" style="object-position:50% 45%"></picture></div><figcaption><span>몸을 맡기는 도구</span><span class="tc">FRAME 02</span></figcaption></figure>
       <div class="light-side rv">
         <p class="light-quote">큰 창으로 들어오는 햇살과 따뜻한 우드톤. 그 안에서 회원분들과 함께 만들어 가는 수업의 순간들이 있습니다.</p>
         <button class="album-btn" type="button" id="openAlbum" aria-haspopup="dialog"><span class="reel" aria-hidden="true"></span>필름 전부 보기<small>6 frames</small></button>
@@ -671,9 +670,9 @@ dialog.album::backdrop{background:#000}
   <section class="why" id="sc4" aria-labelledby="sc4t">
     <h2 class="sr" id="sc4t">아카샤요가가 생각하는 건강</h2>
     <div class="stage">
-      <div class="dark"><picture><source media="(min-width: 900px)" type="image/webp" srcset="new/media/hero-gold.webp"><source media="(min-width: 900px)" srcset="new/media/hero-gold.jpg"><source type="image/webp" srcset="new/media/space-window-gold.webp"><img id="whyDark" src="new/media/space-window-gold.jpg" alt="" loading="lazy" decoding="async" data-slot="PHOTO-03"></picture></div>
+      <div class="dark"><picture><source media="(min-width: 900px)" type="image/webp" srcset="../media/hero-gold.webp"><source media="(min-width: 900px)" srcset="../media/hero-gold.jpg"><source type="image/webp" srcset="../media/space-window-gold.webp"><img id="whyDark" src="../media/space-window-gold.jpg" alt="" loading="lazy" decoding="async" data-slot="PHOTO-03"></picture></div>
       <div class="black" id="whyBlack"></div>
-      <div class="bright" id="whyBright"><picture><source type="image/webp" srcset="new/media/curtain-gold-960.webp 960w, new/media/curtain-gold.webp 1448w" sizes="100vw"><img src="new/media/curtain-gold.jpg" srcset="new/media/curtain-gold-960.jpg 960w, new/media/curtain-gold.jpg 1448w" sizes="100vw" alt="" loading="lazy" decoding="async"></picture></div>
+      <div class="bright" id="whyBright"><picture><source type="image/webp" srcset="../media/curtain-gold-960.webp 960w, ../media/curtain-gold.webp 1448w" sizes="100vw"><img src="../media/curtain-gold.jpg" srcset="../media/curtain-gold-960.jpg 960w, ../media/curtain-gold.jpg 1448w" sizes="100vw" alt="" loading="lazy" decoding="async"></picture></div>
       <div class="flash" id="whyFlash"></div>
       <div class="lines" id="whyLines">
         <p>건강은 육체의 견고함에서 시작하여</p>
@@ -712,7 +711,7 @@ dialog.album::backdrop{background:#000}
     <span id="teacher" class="sr"></span>
     <div class="slate rv"><b>SC.05</b><span class="tc">DIRECTOR</span></div>
     <div class="director rv">
-      <div class="ph"><picture><source type="image/webp" srcset="new/media/director-a-640.webp 640w, new/media/director-a.webp 1024w" sizes="(max-width: 899px) 100vw, 460px"><img src="new/media/director-a.jpg" srcset="new/media/director-a-640.jpg 640w, new/media/director-a.jpg 1024w" sizes="(max-width: 899px) 100vw, 460px" alt="잔디 위에서 다리를 들어 올린 자세로 수련하는 아카샤요가 원장 아카샤" width="1024" height="1536" loading="lazy" decoding="async"></picture></div>
+      <div class="ph"><picture><source type="image/webp" srcset="../media/director-a-640.webp 640w, ../media/director-a.webp 1024w" sizes="(max-width: 899px) 100vw, 460px"><img src="../media/director-a.jpg" srcset="../media/director-a-640.jpg 640w, ../media/director-a.jpg 1024w" sizes="(max-width: 899px) 100vw, 460px" alt="잔디 위에서 다리를 들어 올린 자세로 수련하는 아카샤요가 원장 아카샤" width="1024" height="1536" loading="lazy" decoding="async"></picture></div>
       <div>
         <p class="dir-k">Directed by</p>
         <h2 id="sc5t">아카샤</h2>
@@ -723,7 +722,7 @@ dialog.album::backdrop{background:#000}
       </div>
     </div>
     <div class="director-full rv">
-      <div class="ph"><picture><source type="image/webp" srcset="new/media/director-full-b-600.webp 600w, new/media/director-full-b.webp 1000w" sizes="(max-width: 899px) 100vw, 420px"><img src="new/media/director-full-b.jpg" srcset="new/media/director-full-b-600.jpg 600w, new/media/director-full-b.jpg 1000w" sizes="(max-width: 899px) 100vw, 420px" alt="댄서 자세로 수련하는 원장 아카샤의 뒷모습" width="1000" height="1178" loading="lazy" decoding="async"></picture></div>
+      <div class="ph"><picture><source type="image/webp" srcset="../media/director-full-b-600.webp 600w, ../media/director-full-b.webp 1000w" sizes="(max-width: 899px) 100vw, 420px"><img src="../media/director-full-b.jpg" srcset="../media/director-full-b-600.jpg 600w, ../media/director-full-b.jpg 1000w" sizes="(max-width: 899px) 100vw, 420px" alt="댄서 자세로 수련하는 원장 아카샤의 뒷모습" width="1000" height="1178" loading="lazy" decoding="async"></picture></div>
       <div>
         <p class="when"><span class="en">This week</span>원장 아카샤의 수업</p>
         <ul id="leadClasses"></ul>
@@ -747,7 +746,7 @@ dialog.album::backdrop{background:#000}
     <span id="schedule" class="sr"></span>
     <div class="slate rv"><b>SC.07</b><span class="tc">SHOWTIMES</span></div>
     <div class="tonight-card rv">
-      <div><span class="en">Today</span><span class="when" id="tonightWhen"></span><h2 id="sc7t">오늘,<br>갈 수 있는 수업</h2><p class="note" id="tonightNote"></p><p class="note live">실제 예약 가능 여부와 휴강 소식은 체험 신청 화면과 <a href="https://pf.kakao.com/_xfqxlpb/chat" target="_blank" rel="noopener">카카오 채널</a>에서 확인해 주세요.</p></div>
+      <div><span class="en">Today</span><span class="when" id="tonightWhen"></span><h2 id="sc7t">오늘,<br>갈 수 있는 수업</h2><p class="note" id="tonightNote"></p></div>
       <ul class="sess" id="sess"></ul>
     </div>
     <div class="week-h rv"><h3>하계 수련표</h3><span>운영 10:00–21:50 · 화요일 일부 수업 22:10 종료 · 일요일 휴무</span></div>
@@ -922,7 +921,7 @@ dialog.album::backdrop{background:#000}
   <!-- 엔딩 -->
   <section class="ending" id="sc12" aria-labelledby="sc12t">
     <div class="in rv">
-      <div class="ph"><picture><source type="image/webp" srcset="new/media/closing-b-640.webp 640w, new/media/closing-b.webp 1024w" sizes="(max-width: 899px) 100vw, 440px"><img src="new/media/closing-b.jpg" srcset="new/media/closing-b-640.jpg 640w, new/media/closing-b.jpg 1024w" sizes="(max-width: 899px) 100vw, 440px" alt="붉은 꽃을 들고 몸을 뒤로 젖힌 원장 아카샤" width="1024" height="1156" loading="lazy" decoding="async"></picture></div>
+      <div class="ph"><picture><source type="image/webp" srcset="../media/closing-b-640.webp 640w, ../media/closing-b.webp 1024w" sizes="(max-width: 899px) 100vw, 440px"><img src="../media/closing-b.jpg" srcset="../media/closing-b-640.jpg 640w, ../media/closing-b.jpg 1024w" sizes="(max-width: 899px) 100vw, 440px" alt="붉은 꽃을 들고 몸을 뒤로 젖힌 원장 아카샤" width="1024" height="1156" loading="lazy" decoding="async"></picture></div>
       <div>
         <p class="fin">Last scene</p>
         <h2 class="sr" id="sc12t">아카샤요가 하계</h2>
@@ -1003,15 +1002,15 @@ dialog.album::backdrop{background:#000}
 /*
  * ── 이 페이지의 운영 자료 (한 곳에서만 고칩니다) ──
  * CONFIG   : 외부 주소. 체험 신청 주소는 화면의 모든 「체험 신청하기」 링크(href)와 같아야 합니다.
- * TEACHERS : 강사 목록. photo(예: "new/media/teacher-namyeon.jpg", 세로 4:5 · 800px 이상)와 bio(1~2문장)를 채우면 크레딧에 바로 나옵니다.
+ * TEACHERS : 강사 목록. photo(예: "../media/teacher-namyeon.jpg", 세로 4:5 · 800px 이상)와 bio(1~2문장)를 채우면 크레딧에 바로 나옵니다.
  * SCHEDULE : 하계 수련표. 강사 크레딧 · 오늘 수업 · 주간표 · 수업 소개가 모두 여기서 계산됩니다.
- * CLOSED   : 임시 휴강일. { date: "YYYY-MM-DD", why: "휴강 사유" } 형식으로 날짜가 정해지면 추가합니다. (자동 계산 없음)
+ * CLOSED   : 임시 휴강일. { date: "2026-10-30", why: "5주차 금요일 휴강" } 형식으로 날짜가 정해지면 추가합니다. (자동 계산 없음)
  */
 var CONFIG = {
   trialUrl: "https://wonjangbiseo.com/trial?y=akashayoga-hagye&src=site",
   kakaoChat: "https://pf.kakao.com/_xfqxlpb/chat",
   loungeUrl: null,      // LOUNGE-PUBLIC-URL · 원장비서 공식 라운지 주소가 확정되면 넣습니다
-  preview: false        // 메인 공개본 · 주소 없는 라운지 섹션은 숨겨집니다 (/new/ 미리보기에서는 true)
+  preview: true         // /new/ 미리보기 동안 true · 메인 교체 때 false (주소 없는 라운지 섹션은 그때 숨겨집니다)
 };
 var TEACHERS = [
   { name: "아카샤", role: "원장", photo: null, bio: null },
@@ -1076,7 +1075,7 @@ var CLOSED = [];
   }
   var saveData = navigator.connection && navigator.connection.saveData;
   if (vid && wide && !reduce && !saveData && vid.canPlayType && vid.canPlayType("video/mp4")) {
-    vid.innerHTML = '<source src="new/media/intro.webm" type="video/webm"><source src="new/media/intro.mp4" type="video/mp4">';
+    vid.innerHTML = '<source src="../media/intro.webm" type="video/webm"><source src="../media/intro.mp4" type="video/mp4">';
     vid.preload = "auto"; vid.load();
     setTimeout(function () { var pr = vid.play(); if (pr && pr.then) pr.then(function () { intro.classList.add("has-video"); }).catch(function () {}); }, 600);
   }
@@ -1214,7 +1213,7 @@ var CLOSED = [];
     ["hero-m", "해 질 녘 통창", 900]
   ];
   var album = $("#album"), sheet = $("#sheet"), viewer = $("#viewer"), viewImg = $("#viewImg"), albumOpen = false, cur = 0, built = false;
-  function pic(n) { return "new/media/" + n; }
+  function pic(n) { return "../media/" + n; }
   function buildSheet() {
     if (built) return; built = true;
     sheet.innerHTML = PHOTOS.map(function (ph, i) {
